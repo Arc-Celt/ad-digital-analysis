@@ -215,6 +215,7 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Images
-*.png
-*.jpg
+# Data and models
+data/
+models/
+output/
