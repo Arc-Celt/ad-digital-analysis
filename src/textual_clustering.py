@@ -102,9 +102,10 @@ def main():
     reducer = umap.UMAP(
         n_components=2,
         random_state=42,
-        n_neighbors=10,
-        min_dist=0.1,
-        metric='cosine'
+        n_neighbors=5,
+        min_dist=0.2,
+        metric='cosine',
+        spread=1.5
     )
     features_2d = reducer.fit_transform(features)
     print(f"Reduced from {features.shape[1]}D to {features_2d.shape[1]}D")
@@ -112,8 +113,8 @@ def main():
     # HDBSCAN clustering
     print("\nRunning HDBSCAN clustering...")
     clusterer = hdbscan.HDBSCAN(
-        min_cluster_size=12,
-        min_samples=6,
+        min_cluster_size=10,
+        min_samples=4,
         metric='euclidean',
         cluster_selection_method='eom',
         cluster_selection_epsilon=0.1
