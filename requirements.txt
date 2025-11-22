@@ -1,0 +1,11 @@
+google-generativeai
+python-dotenv
+pandas
+numpy
+matplotlib
+Pillow
+torch
+transformers
+tqdm
+umap-learn
+hdbscan
